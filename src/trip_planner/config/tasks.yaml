@@ -20,7 +20,7 @@ gather_city_info:
 
 itinerary_planning:
   description: >
-    Create a 7-day itinerary for {cities} from {dates}.
+    Create an itinerary for {cities} from {dates}.
     Include one main activity per day, one restaurant recommendation,
     and a simple budget breakdown.
     Keep response under 800 words.
