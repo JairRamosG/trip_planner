@@ -1,58 +1,29 @@
 city_selection:
   description: >
-    Analyze and select the best city for the trip based on specific criteria such as weather
-    patterns, seasonal events, travel costs and the interests {interest} provided. This task involves 
-    comparing multiple cities from {cities}. use the reference dates {dates} as reference to consider 
-    factors like current weather conditions, upcoming cultural, sport or seasonal events, and overall 
-    travel expendses. The final answer must be a detailed report on the chosen city, approximate costs,
-    weather forecast, and principal attractions.
+    Select the best city from {cities} for a trip during {dates}.
+    Consider weather, costs, and interests: {interest}.
+    Provide a brief report with chosen city, transport cost from origin, 
+    weather summary, and top 3 attractions.
   expected_output: >
-    Identify the best city for the trip
+    Chosen city with brief justification, cost estimate, and top attractions.
   agent: city_selection_expert
 
 gather_city_info:
   description: >
-    Compile an in-depth guide for the selected city {cities}, gathering information about key attractions
-    related to the interests {interest}, local custums, special events, and daily activity recomendations.
-    This guide should provide a thorough overview of what the city hs to offer, including hidden gems, 
-    cultural hotspots, must-visit landmarks, weather forecasts and high level cost avalible during the dates {dates}
+    Create a concise guide for the selected city during {dates}.
+    Focus on: top 5 attractions related to {interest}, 
+    2-3 local restaurants, and key cultural tips.
+    Keep response under 500 words.
   expected_output: >
-    Gather in-depth city guide information
+    Concise city guide with attractions, food, and cultural tips.
   agent: local_tour_guide
 
 itinerary_planning:
   description: >
-    Expand the city guide into a full 7-day travel itinierary with detailed per-day plans, 
-    including weather forecasts, places to eat, packing suggestions, and a budget breakdown from the city {cities}.
-    You must suggest actual places to visit, actual hotels to stay, and actual restaurants to go to.
-    This itinerary should cover all aspects of the trip, from arrival to departure, integrating
-    the city guide information with practival travel logistics. Use the reference dates {dates} to plan 
-    the itinerary
+    Create a 7-day itinerary for {cities} from {dates}.
+    Include one main activity per day, one restaurant recommendation,
+    and a simple budget breakdown.
+    Keep response under 800 words.
   expected_output: >
-    Develop a detailed itinerary, including city selection, attactions, and practical travel advice.
+    7-day itinerary with daily activities, food, and budget.
   agent: expert_travel_agent
-
-# Creating Tasks principles:
-# 1. Begin with the end in mind: identify the specific outcome your tasks ara aiming to achieve.
-# 2. Break down the outcome into actionable tasks, assining each tast to the appropiate agent.
-# 3. Ensure tasks are descriptive, providing clear instructions and expected delivereables.
-#
-# Goal.
-#   - Develop a detailed itinerary, including city selection, attactions, and practical travel advice.
-#
-# Key steps for tasks creation:
-# 1. Idetify the desired outcome: Define whats success looks like for the itinierary.
-#   - A detailed and personalized travel plan that includes city selection, attractions,
-#     and practical advice, tailored to the user's preferences and needs.
-#
-# 2. Break down: Divide the goal into smaller, manageable tasks that agents can execute..
-#  - Itinerary planning: Develop a detailden plan for each day of the trip.
-#  - City selection: Research and select cities to visit.
-#  - Local tour guide: Provide insights and recommendations for local tours and activities.
-#
-# 3. Assign tasks to agents: Match tasks with agents based on their roles and expertise.
-#  - itinerary_planning > expert_travel_agent
-#  - city_selection     > city_selection_expert
-#  - gather_citi_info   > local_tour_guide
-
-
