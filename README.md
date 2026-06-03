@@ -1,54 +1,170 @@
-# TripPlanner Crew
+# Trip Planner AI
 
-Welcome to the TripPlanner Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![CrewAI](https://img.shields.io/badge/CrewAI-Multi--Agent-FF6B6B?style=for-the-badge&logo=robot&logoColor=white)
+![Anthropic](https://img.shields.io/badge/Anthropic-Claude-191919?style=for-the-badge&logo=anthropic&logoColor=white)
+![Serper](https://img.shields.io/badge/Serper-Google%20Search-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-white?style=for-the-badge&logo=ollama&logoColor=black)
 
-## Installation
+Sistema multi-agente de planificación de viajes construido con **CrewAI** que genera itinerarios personalizados basados en tus intereses, fechas y ciudades de preferencia.
 
-Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+---
 
-First, if you haven't already, install uv:
+## Agentes
 
-```bash
-pip install uv
+El sistema cuenta con tres agentes especializados que trabajan en secuencia:
+
+| Agente | Rol | Herramientas |
+|--------|-----|--------------|
+| **City Selection Expert** | Analiza y selecciona la mejor ciudad según clima, costos y eventos | Serper Search |
+| **Local Tour Guide** | Compila una guía detallada de la ciudad seleccionada | Serper Search, Web Scraping |
+| **Expert Travel Agent** | Genera el itinerario completo de 7 días | Serper Search |
+
+---
+
+## Flujo de trabajo
+
+```
+Usuario ingresa datos
+        ↓
+City Selection Expert → Selecciona la mejor ciudad
+        ↓
+Local Tour Guide → Investiga atracciones y cultura local
+        ↓
+Expert Travel Agent → Genera itinerario completo
+        ↓
+Reportes generados en /reportes/
 ```
 
-Next, navigate to your project directory and install the dependencies:
+---
 
-(Optional) Lock the dependencies and install them by using the CLI command:
+## Requisitos previos
+
+- Python 3.11+
+- Conda o entorno virtual
+- Cuenta en [Anthropic](https://console.anthropic.com) (Claude API)
+- Cuenta en [Serper](https://serper.dev) (Google Search API)
+
+---
+
+## Instalación
+
+**1. Clona el repositorio:**
 ```bash
-crewai install
-```
-### Customizing
-
-**Add your `OPENAI_API_KEY` into the `.env` file**
-
-- Modify `src/trip_planner/config/agents.yaml` to define your agents
-- Modify `src/trip_planner/config/tasks.yaml` to define your tasks
-- Modify `src/trip_planner/crew.py` to add your own logic, tools and specific args
-- Modify `src/trip_planner/main.py` to add custom inputs for your agents and tasks
-
-## Running the Project
-
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
-
-```bash
-$ crewai run
+git clone https://github.com/tu-usuario/trip_planner.git
+cd trip_planner
 ```
 
-This command initializes the trip_planner Crew, assembling the agents and assigning them tasks as defined in your configuration.
+**2. Crea y activa el entorno:**
+```bash
+conda create -n trip_planner python=3.11
+conda activate trip_planner
+```
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+**3. Instala CrewAI:**
+```bash
+pip install crewai crewai-tools
+```
 
-## Understanding Your Crew
+**4. Configura las variables de entorno:**
+```bash
+cp .env.example .env
+```
 
-The trip_planner Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+Edita el `.env` con tus keys:
+```dotenv
+MODEL=anthropic/claude-haiku-4-5-20251001
+ANTHROPIC_API_KEY=tu-api-key-aqui
+SERPER_API_KEY=tu-serper-key-aqui
+```
 
-## Support
+**5. Crea la carpeta de reportes:**
+```bash
+mkdir reportes
+```
 
-For support, questions, or feedback regarding the TripPlanner Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
+---
 
-Let's create wonders together with the power and simplicity of crewAI.
+## Uso
+
+```bash
+crewai run
+```
+
+El sistema te pedirá:
+
+```
+Where are you located?
+> CDMX
+
+What are the cities options you are interested in visiting?
+> Puerto Vallarta, Cancún
+
+What are some of your high level interests and hobbies?
+> hiking, live music, swimming
+
+What is the starting date? (YYYY-MM-DD)
+> 2026-07-01
+
+How long is the trip in days?
+> 7
+```
+
+---
+
+## Estructura del proyecto
+
+```
+trip_planner/
+├── src/
+│   └── trip_planner/
+│       ├── config/
+│       │   ├── agents.yaml       # Definición de agentes
+│       │   └── tasks.yaml        # Definición de tareas
+│       ├── crew.py               # Orquestación del crew
+│       └── main.py               # Punto de entrada
+├── reportes/
+│   ├── local_guide_report.md     # Guía de la ciudad
+│   └── itinerary.md              # Itinerario completo
+├── .env                          # Variables de entorno (no compartir)
+├── .env.example                  # Plantilla de variables
+├── pyproject.toml                # Configuración del proyecto
+└── README.md
+```
+
+---
+
+## Reportes generados
+
+Después de cada ejecución se generan dos archivos en `/reportes/`:
+
+- **`local_guide_report.md`** — Guía detallada de la ciudad seleccionada
+- **`itinerary.md`** — Itinerario completo día a día con hoteles, restaurantes y actividades
+
+---
+
+## Variables de entorno
+
+| Variable | Descripción | Requerida |
+|----------|-------------|-----------|
+| `MODEL` | Modelo LLM a usar | ✅ |
+| `ANTHROPIC_API_KEY` | API Key de Anthropic (Claude) | ✅ |
+| `SERPER_API_KEY` | API Key de Serper (Google Search) | ✅ |
+
+---
+
+## Modelos compatibles
+
+El sistema es compatible con cualquier LLM. Cambia el `MODEL` en tu `.env`:
+
+```dotenv
+# Anthropic (recomendado)
+MODEL=anthropic/claude-haiku-4-5-20251001
+
+# Groq (gratuito)
+MODEL=groq/llama-3.1-8b-instant
+
+# Local con Ollama
+MODEL=ollama/llama3.1:8b
+```
+
