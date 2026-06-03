@@ -1,17 +1,58 @@
-research_task:
+city_selection:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
+    Analyze and select the best city for the trip based on specific criteria such as weather
+    patterns, seasonal events, travel costs and the interests {interest} provided. This task involves 
+    comparing multiple cities from {cities}. use the reference dates {dates} as reference to consider 
+    factors like current weather conditions, upcoming cultural, sport or seasonal events, and overall 
+    travel expendses. The final answer must be a detailed report on the chosen city, approximate costs,
+    weather forecast, and principal attractions.
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: researcher
+    Identify the best city for the trip
+  agent: city_selection_expert
 
-reporting_task:
+gather_city_info:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Compile an in-depth guide for the selected city {cities}, gathering information about key attractions
+    related to the interests {interest}, local custums, special events, and daily activity recomendations.
+    This guide should provide a thorough overview of what the city hs to offer, including hidden gems, 
+    cultural hotspots, must-visit landmarks, weather forecasts and high level cost avalible during the dates {dates}
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+    Gather in-depth city guide information
+  agent: local_tour_guide
+
+itinerary_planning:
+  description: >
+    Expand the city guide into a full 7-day travel itinierary with detailed per-day plans, 
+    including weather forecasts, places to eat, packing suggestions, and a budget breakdown from the city {cities}.
+    You must suggest actual places to visit, actual hotels to stay, and actual restaurants to go to.
+    This itinerary should cover all aspects of the trip, from arrival to departure, integrating
+    the city guide information with practival travel logistics. Use the reference dates {dates} to plan 
+    the itinerary
+  expected_output: >
+    Develop a detailed itinerary, including city selection, attactions, and practical travel advice.
+  agent: expert_travel_agent
+
+# Creating Tasks principles:
+# 1. Begin with the end in mind: identify the specific outcome your tasks ara aiming to achieve.
+# 2. Break down the outcome into actionable tasks, assining each tast to the appropiate agent.
+# 3. Ensure tasks are descriptive, providing clear instructions and expected delivereables.
+#
+# Goal.
+#   - Develop a detailed itinerary, including city selection, attactions, and practical travel advice.
+#
+# Key steps for tasks creation:
+# 1. Idetify the desired outcome: Define whats success looks like for the itinierary.
+#   - A detailed and personalized travel plan that includes city selection, attractions,
+#     and practical advice, tailored to the user's preferences and needs.
+#
+# 2. Break down: Divide the goal into smaller, manageable tasks that agents can execute..
+#  - Itinerary planning: Develop a detailden plan for each day of the trip.
+#  - City selection: Research and select cities to visit.
+#  - Local tour guide: Provide insights and recommendations for local tours and activities.
+#
+# 3. Assign tasks to agents: Match tasks with agents based on their roles and expertise.
+#  - itinerary_planning > expert_travel_agent
+#  - city_selection     > city_selection_expert
+#  - gather_citi_info   > local_tour_guide
+
+

@@ -2,10 +2,12 @@
 name = "trip_planner"
 version = "0.1.0"
 description = "trip_planner using crewAI"
-authors = [{ name = "Your Name", email = "you@example.com" }]
-requires-python = ">=3.10,<3.14"
+authors = [{ name = "Jair Ramos", email = "ramosgonzalezjair@gmail.com" }]
+requires-python = ">=3.11,<3.13"
 dependencies = [
-    "crewai[tools]==1.14.5a2"
+    "crewai[tools]>=0.114.0,<1.0.0",
+    "pyowm == 3.3.0",
+    "python-dotenv == 1.2.2"
 ]
 
 [project.scripts]
@@ -22,3 +24,6 @@ build-backend = "hatchling.build"
 
 [tool.crewai]
 type = "crew"
+
+[tool.uv]
+prerelease = "allow"
