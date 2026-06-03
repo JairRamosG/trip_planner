@@ -47,14 +47,14 @@ class TripPlanner():
     def gather_city_info(self) -> Task:
         return Task(
             config=self.tasks_config['gather_city_info'], # type: ignore[index]
-            output_file='local_guide_report.md'
+            output_file='reportes/local_guide_report.md'
         )
     
     @task
     def itinerary_planning(self) -> Task:
         return Task(
             config=self.tasks_config['itinerary_planning'], # type: ignore[index]
-            output_file='itinerary.md'
+            output_file='reportes/itinerary.md'
         )
 
 
