@@ -147,9 +147,9 @@ Después de cada ejecución se generan dos archivos en `/reportes/`:
 
 | Variable | Descripción | Requerida |
 |----------|-------------|-----------|
-| `MODEL` | Modelo LLM a usar | ✅ |
-| `ANTHROPIC_API_KEY` | API Key de Anthropic (Claude) | ✅ |
-| `SERPER_API_KEY` | API Key de Serper (Google Search) | ✅ |
+| `MODEL` | Modelo LLM a usar | Si |
+| `ANTHROPIC_API_KEY` | API Key de Anthropic (Claude) | Si |
+| `SERPER_API_KEY` | API Key de Serper (Google Search) | Si |
 
 ---
 
@@ -164,7 +164,7 @@ MODEL=anthropic/claude-haiku-4-5-20251001
 # Groq (gratuito)
 MODEL=groq/llama-3.1-8b-instant
 
-# Local con Ollama
+# Local con Ollama (necesitas una consulta muy sencilla)
 MODEL=ollama/llama3.1:8b
 ```
 
