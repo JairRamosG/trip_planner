@@ -15,8 +15,9 @@ class TripPlanner():
     def expert_travel_agent(self) -> Agent:
         return Agent(
             config=self.agents_config['expert_travel_agent'],
-            tools = [SerperDevTool()],
+            #tools = [SerperDevTool()],
             max_iter = 3,
+            max_execution_time=45,
             verbose=True
         )
 
@@ -24,8 +25,9 @@ class TripPlanner():
     def city_selection_expert(self) -> Agent:
         return Agent(
             config=self.agents_config['city_selection_expert'],
-            tools = [SerperDevTool()], 
+            #tools = [SerperDevTool()], 
             max_iter = 3,
+            max_execution_time=45,
             verbose=True
         )
 
@@ -33,8 +35,9 @@ class TripPlanner():
     def local_tour_guide(self) -> Agent:
         return Agent(
             config=self.agents_config['local_tour_guide'],
-            tools = [SerperDevTool(), ScrapeWebsiteTool()],
+            #tools = [SerperDevTool(), ScrapeWebsiteTool()],
             max_iter = 3, 
+            max_execution_time=45,
             verbose=True
         )
 

@@ -6,8 +6,10 @@ from fpdf import FPDF
 def md_a_pdf(texto):
     pdf = FPDF()
     pdf.add_page()
-    pdf.set_font('Arial', size = 12)
-    pdf.multi_cell(0, 10, texto)
+    pdf.set_font("Helvetica", size=12)
+    # Reemplazar caracteres especiales
+    texto_limpio = texto.replace('–', '-').replace('—', '-').replace('"', '"').replace('"', '"').replace(''', "'").replace(''', "'")
+    pdf.multi_cell(0, 10, texto_limpio)
     return bytes(pdf.output())
 
 st.title('Trip planner')
