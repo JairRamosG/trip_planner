@@ -1,6 +1,14 @@
 import streamlit as st
 from src.trip_planner.crew import TripPlanner
 from datetime import datetime, timedelta
+from fpdf import FPDF
+
+def md_a_pdf(texto):
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font('Arial', size = 12)
+    pdf.multi_cell(0, 10, texto)
+    return bytes(pdf.output())
 
 st.title('Trip planner')
 
@@ -21,5 +29,13 @@ if st.button("Planear viaje"):
         }
         result = TripPlanner().crew().kickoff(inputs = inputs)
     
-    st.markdown("Itinerario")
-    st.markdown(str(result))
+    if result:
+        st.markdown('Itinerario')
+
+        pdf_bytes = md_a_pdf(str(result))
+        st.download_button(
+            label = 'Descargar itinerario',
+            data = pdf_bytes,
+            file_name= 'itinerario.pdf',
+            mime = 'application/pdf'
+        )
