@@ -6,11 +6,10 @@ authors = [{ name = "Jair Ramos", email = "ramosgonzalezjair@gmail.com" }]
 requires-python = ">=3.11,<3.13"
 dependencies = [
     "crewai[tools]>=0.114.0,<1.0.0",
-    "pyowm == 3.3.0",
-    "python-dotenv == 1.2.2",
-    "streamlit == 1.58.0",
-    "weasyprint>=60.0",
-    "markdown2>=2.4.0"
+    "pyowm==3.3.0",
+    "python-dotenv==1.2.2",
+    "streamlit==1.58.0",
+    "fpdf2>=2.7.0"
 ]
 
 [project.scripts]

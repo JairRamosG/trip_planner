@@ -3,11 +3,6 @@ from src.trip_planner.crew import TripPlanner
 from datetime import datetime, timedelta
 from utils.pdf import md_a_pdf
 
-import streamlit as st
-from src.trip_planner.crew import TripPlanner
-from datetime import datetime, timedelta
-from utils.pdf import md_a_pdf
-
 # Configuración de la página
 st.set_page_config(
     page_title="Trip Planner AI",
@@ -96,7 +91,7 @@ if st.button("Planear mi viaje"):
                 st.markdown(str(result))
                 st.divider()
 
-                pdf_bytes = md_a_pdf(str(result), titulo="Itinerario de Viaje")
+                pdf_bytes = md_a_pdf(str(result))
                 st.download_button(
                     label="Descargar itinerario en PDF",
                     data=pdf_bytes,

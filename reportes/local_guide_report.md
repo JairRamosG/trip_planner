@@ -1,45 +1,38 @@
-# TEPOZTLÁN, MORELOS: 3-DAY ADVENTURE GUIDE (JUNE 6-8, 2026)
+# XALAPA, VERACRUZ: YOUR 3-DAY GUIDE (JUNE 5-7, 2026)
 
-## TOP 5 ATTRACTIONS
+## TOP 5 HIKING & OUTDOOR ATTRACTIONS
 
-**1. TEPOZTECO NATIONAL PARK & PYRAMID HIKE**
-Challenging 1.5-2 hour ascent to a pre-Hispanic temple at 2,300m with panoramic valley views. Start early (6 AM) to beat afternoon rain. Free entrance; guides available ($200-400 MXN). Perfect for serious hikers seeking authentic cultural and natural immersion.
+1. **Cofre de Perote National Park** - Cloud forest trails with waterfalls; 2-6 hour options available. Hire local guides ($15-20 USD). Perfect for June's misty conditions.
 
-**2. CASCADA DE SALTO CHICO (WATERFALL & SWIMMING)**
-Crystal-clear emerald pools ideal for swimming and cooling off after hikes. Easy-to-moderate 2-3 hour trail along the river. Free access (small tips appreciated: $50-100 MXN). This is your premier swimming destination.
+2. **Cascada de Texolo** - 80-meter waterfall hike; moderate difficulty, 2-3 hours round trip. Essential rainy season destination.
 
-**3. TOWN CENTER BIKE TOUR**
-Flat-to-rolling scenic routes through colonial Tepoztlán visiting artisan shops, the 16th-century church, and local markets. Bike rentals: $100-150 MXN/day. Perfect for leisurely exploration and authentic cultural experiences.
+3. **Barranca de Metlac** - Dramatic canyon views with riverside trails. 1-2 hour walks suitable for all fitness levels.
 
-**4. MOUNTAIN BIKING TRAILS**
-Multiple beginner-to-intermediate trails surrounding the town offering stunning canyon views. Accessible from town center with proper equipment rental. Combines adventure with accessibility.
+4. **Jardín Botánico Xalapeño** - Mountain gardens showcasing native flora. 1-hour leisurely walk with museum quality specimens.
 
-**5. DOMINICAL MARKET & LOCAL EXPLORATION**
-Vibrant weekend market (Sundays best) showcasing local crafts, produce, and authentic Mexican culture. Free to explore; budget $200-400 MXN for shopping and sampling local goods.
+5. **Xico Waterfall Trek** - Nearby pueblo mágico with 60-meter falls; popular weekend hike from Xalapa (30 minutes drive).
 
-## LOCAL RESTAURANTS (MUST-VISIT)
+## MUST-VISIT MUSEUMS
 
-**EL TEPOZNIÑO**
-Traditional Morelense cuisine featuring mole negro, quesadillas with huitlacoche, and fresh agua fresca. Casual family-run atmosphere. Budget: $120-180 MXN per person. Located in town center near the church.
+- **Museo de Antropología de Xalapa** - Mexico's premier museum featuring Olmec colossal heads and Totonac artifacts. 2-3 hours essential. ($4-5 USD entry)
+- **Galería de Arte Contemporáneo** - Local and regional modern art in colonial setting.
 
-**RESTAURANT AXAYÁCATL**
-Farm-to-table dining with organic ingredients, fresh juices, and vegetarian options. Modern ambiance with traditional flavors. Budget: $150-250 MXN per person. Perfect after morning hikes.
+## LOCAL RESTAURANTS (3 RECOMMENDATIONS)
 
-**CHINAMPA CAFÉ**
-Charming café serving excellent coffee, fresh pastries, and light lunch. Local art displays on walls. Budget: $80-120 MXN per person. Ideal for breakfast before early hikes.
+1. **Casa Xalapa** - Regional Veracruz cuisine; try xalapeños (poblano peppers stuffed with Oaxaca cheese). Average $8-10 USD per person.
+
+2. **El Comedor de Micaela** - Authentic home cooking, traditional mole negro, fresh fish dishes. $6-9 USD per person.
+
+3. **Café Crespo** - Historic café (1895) for coffee, chilaquiles breakfast, local pastries. $5-7 USD per person.
 
 ## CULTURAL TIPS
 
-- **Respect Sacred Sites:** The Tepozteco pyramid is spiritually significant to local communities. Dress modestly and ask before photographing locals.
-- **Weather Planning:** June is early rainy season. Complete outdoor activities by 2 PM; afternoon showers are brief (2-4 hours) but intense.
-- **Local Spanish Helpful:** While tourism is common, speaking basic Spanish earns genuine respect and better local insights.
-- **Cash Required:** Many small establishments don't accept cards. ATMs available in town center.
-- **Sustainable Travel:** Support local guides, artisans, and family-run businesses. Don't litter hiking trails.
-- **Sun Protection:** High altitude (1,800m elevation) means intense UV exposure despite cool temperatures. Sunscreen essential.
-- **Indigenous Heritage:** Tepoztlán has Nahua indigenous roots visible in local culture, language, and traditions. Approach with cultural sensitivity and genuine curiosity.
-- **Market Etiquette:** Haggling expected at markets but remain respectful and friendly.
+- **Language**: Spanish essential; English limited outside tourist areas. Learn basic phrases.
+- **Timing**: Arrive early for museums; close at 5 PM weekdays.
+- **Rainy Season Etiquette**: Locals dress lightly despite rain; embrace moisture—it's normal.
+- **Plaza Culture**: Evening paseos (strolls) on Plaza Xallitic are social tradition; join locals at 6-8 PM.
+- **Regional Pride**: Show interest in Veracruz traditions; locals appreciate genuine curiosity about local mole recipes and jarocha music.
+- **Tipping**: 10-15% in restaurants appreciated but not mandatory for small establishments.
+- **Dress Code**: Casual comfort; sturdy hiking boots essential. Light layers for temperature fluctuations.
 
-**SUGGESTED 3-DAY ITINERARY:**
-Day 1: Arrive, Cascada de Salto Chico swim/hike, dinner at El Tepozniño. Day 2: Early Tepozteco pyramid hike, afternoon bike tour, sunset viewpoint. Day 3: Leisurely morning bike ride or second waterfall visit, return to Cuautla.
-
-**BUDGET:** $150-250 USD per person (including transport, modest accommodation, food, and activities).
+**PRACTICAL NOTE**: Pack waterproof jacket for afternoon showers. Altitude (1,430m) feels cooler—perfect for June hiking. ADO buses depart Cuautla 7:00 AM-5:00 PM daily (~3.5 hours, $25-35 USD).
