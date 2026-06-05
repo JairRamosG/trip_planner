@@ -28,8 +28,8 @@ def md_a_pdf(texto, titulo="Itinerario de Viaje"):
     .replace('\u2019', "'")
     .replace('\u201c', '"')
     .replace('\u201d', '"')
-    .replace('•', '-')  # ← ya está
-    .replace('\u2022', '-')  # ← agrega este también
+    .replace('•', '-')  
+    .replace('\u2022', '-') 
     .encode('latin-1', errors='replace')
     .decode('latin-1')
 )
